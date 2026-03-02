@@ -1,65 +1,56 @@
-<!DOCTYPE html> <!-- HTML5 -->
-<html lang="sv"> <!-- Språk svenska -->
-
+<!DOCTYPE html>
+<html lang="sv">
 <head>
-    <!-- Teckenkodning -->
     <meta charset="UTF-8">
-
-    <!-- Gör sidan mobilanpassad -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Titel -->
     <title>NHL Statistik - Sök</title>
-
-    <!-- Extern CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <header>
-    <!-- Huvudrubrik -->
-    <h1>NHL Statistik</h1>
+    <div class="logo">NHL Statistik</div>
 
-    <!-- Navigering -->
+    <!-- Fast meny -->
     <nav>
-        <a href="index.html">Startsida</a>
-        <a href="spelare.html">Spelare</a>
-        <a href="lag.html">Lag</a>
-        <a href="statistik.html">Statistik</a>
-        <a href="sok.html">Sök</a>
-        <a href="om.html">Om</a>
+        <ul>
+            <li><a href="index.html">Startsida</a></li>
+            <li><a href="spelare.html">Spelare</a></li>
+            <li><a href="lag.html">Lag</a></li>
+            <li><a href="statistik.html">Statistik</a></li>
+            <li><a href="sok.html" class="active">Sök</a></li>
+            <li><a href="om.html">Om</a></li>
+        </ul>
     </nav>
-
-    <!-- Global sökfunktion -->
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Sök sida...">
-        <ul id="resultList"></ul>
-    </div>
 </header>
 
-<!-- Sök-sidans innehåll -->
 <main>
-    <h2>Sök</h2>
 
+    <!-- Rubrik -->
+    <h1>Sök spelare eller lag</h1>
+
+    <!-- Sökfält enligt kravspec -->
+    <input type="text" id="searchInput" placeholder="Skriv namn på spelare eller lag...">
+
+    <!-- Resultatlista som fylls via JavaScript -->
+    <ul id="resultList"></ul>
+
+    <!-- Förklaring -->
     <p>
-        Använd sökfältet ovan för att snabbt navigera till olika sidor
-        på webbplatsen.
+        Skriv i sökfältet för att snabbt hitta spelare, lag eller statistik.
+        Klicka på ett resultat för att komma vidare.
     </p>
 
-    <p>
-        Sökfunktionen är implementerad med JavaScript och filtrerar
-        sidor dynamiskt.
-    </p>
 </main>
 
-<!-- Sidfot -->
 <footer>
     <p>&copy; 2026 NHL Statistik</p>
 </footer>
 
-<!-- Kopplar JavaScript -->
 <script src="js/script.js"></script>
+</body>
+</html>
 
 </body>
 </html>
+
