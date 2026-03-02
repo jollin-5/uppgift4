@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hämtar listan där resultaten ska visas
     const resultList = document.getElementById("resultList");
 
-    // Lista över alla sidor som kan sökas
+    // Array med alla sidor som går att söka
     const pages = [
         { name: "Startsida", url: "index.html" },
         { name: "Spelare", url: "spelare.html" },
@@ -17,25 +17,25 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Om webbplatsen", url: "om.html" }
     ];
 
-    // Säkerhetskontroll så att koden bara körs om elementen finns
+    // Säkerhetskontroll så att elementen finns
     if (searchInput && resultList) {
 
         // När användaren skriver i sökfältet
         searchInput.addEventListener("keyup", function () {
 
-            // Gör texten till små bokstäver
+            // Gör söktexten till små bokstäver
             const searchTerm = searchInput.value.toLowerCase();
 
-            // Töm tidigare resultat
+            // Rensar tidigare resultat
             resultList.innerHTML = "";
 
-            // Om inget skrivits – visa inget
+            // Om inget är skrivet, visa inget
             if (searchTerm.length === 0) return;
 
-            // Går igenom varje sida
+            // Loopar igenom alla sidor
             pages.forEach(function (page) {
 
-                // Om sidnamnet matchar sökningen
+                // Om sidans namn innehåller sökordet
                 if (page.name.toLowerCase().includes(searchTerm)) {
 
                     // Skapar nytt listelement
@@ -47,10 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     // Sätter länkens adress
                     link.href = page.url;
 
-                    // Sätter text
+                    // Sätter länkens text
                     link.textContent = page.name;
 
-                    // Gör länken vit
+                    // Gör texten vit
                     link.style.color = "white";
 
                     // Lägger in länken i listan
@@ -63,3 +63,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
