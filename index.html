@@ -1,17 +1,17 @@
 <!DOCTYPE html> <!-- Anger att vi använder HTML5 -->
-<html lang="sv"> <!-- Språket är svenska -->
+<html lang="sv"> <!-- Anger språk: svenska -->
 
 <head>
-    <!-- Teckenkodning så att å, ä, ö fungerar -->
+    <!-- Teckenkodning så att å, ä, ö fungerar korrekt -->
     <meta charset="UTF-8">
 
-    <!-- Gör sidan responsiv på mobil -->
+    <!-- Gör sidan responsiv (anpassar sig till mobil och surfplatta) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Titel som visas i webbläsarens flik -->
+    <!-- Titel som visas i webbläsarfliken -->
     <title>NHL Statistik - Startsida</title>
 
-    <!-- Kopplar extern CSS-fil -->
+    <!-- Länkar extern CSS-fil -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -21,7 +21,7 @@
     <!-- Webbplatsens huvudrubrik -->
     <h1>NHL Statistik</h1>
 
-    <!-- Navigationsmeny -->
+    <!-- Navigationsmeny för att byta sida -->
     <nav>
         <a href="index.html">Startsida</a>
         <a href="spelare.html">Spelare</a>
@@ -31,20 +31,50 @@
         <a href="om.html">Om</a>
     </nav>
 
-    <!-- Sökfunktion -->
+    <!-- Global sökfunktion -->
     <div class="search-container">
+
         <!-- Inputfält där användaren skriver -->
         <input type="text" id="searchInput" placeholder="Sök sida...">
 
-        <!-- Lista där sökresultat visas -->
+        <!-- Lista där sökresultat visas dynamiskt -->
         <ul id="resultList"></ul>
+
     </div>
 </header>
 
 <!-- Huvudinnehåll -->
 <main>
-    <h2>Välkommen</h2>
-    <p>Utforska NHL statistik, spelare och lag.</p>
+
+    <!-- Sektion för toppspelare -->
+    <h2>Toppspelare 2023/24</h2>
+
+    <!-- Flex-container för spelarkort -->
+    <div class="card-container">
+
+        <!-- Kort 1 -->
+        <div class="card">
+            <h3>Nikita Kucherov</h3>
+            <p>Lag: Tampa Bay Lightning</p>
+            <p>Poäng: 144</p>
+        </div>
+
+        <!-- Kort 2 -->
+        <div class="card">
+            <h3>Nathan MacKinnon</h3>
+            <p>Lag: Colorado Avalanche</p>
+            <p>Poäng: 140</p>
+        </div>
+
+        <!-- Kort 3 -->
+        <div class="card">
+            <h3>Connor McDavid</h3>
+            <p>Lag: Edmonton Oilers</p>
+            <p>Poäng: 132</p>
+        </div>
+
+    </div>
+
 </main>
 
 <!-- Sidfot -->
@@ -52,7 +82,7 @@
     <p>&copy; 2026 NHL Statistik</p>
 </footer>
 
-<!-- Kopplar extern JavaScript -->
+<!-- Länkar extern JavaScript-fil -->
 <script src="js/script.js"></script>
 
 </body>
