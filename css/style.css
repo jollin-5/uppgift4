@@ -1,39 +1,57 @@
+/* ===== Grundinställningar för hela sidan ===== */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0d1b2a;
-    color: white;
+    margin: 0; /* Tar bort standardmarginal */
+    font-family: Arial, sans-serif; /* Typsnitt */
+    background-color: #0d1b2a; /* Mörk bakgrund */
+    color: white; /* Vit text */
 }
 
+/* ===== Header ===== */
 header {
-    background-color: #1b263b;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #1b263b; /* Mörkare blå */
+    padding: 20px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
+/* ===== Navigationslänkar ===== */
 nav a {
     color: white;
-    text-decoration: none;
+    margin-right: 15px;
+    text-decoration: none; /* Tar bort understrykning */
 }
 
+/* Hover-effekt */
 nav a:hover {
-    color: #00b4d8;
+    color: #00b4d8; /* Ljusblå accent */
 }
 
+/* ===== Sökfunktion ===== */
+.search-container {
+    margin-top: 10px;
+}
+
+#searchInput {
+    padding: 8px;
+    width: 200px;
+}
+
+#resultList {
+    list-style: none; /* Tar bort punkter */
+    padding: 0;
+    margin-top: 5px;
+}
+
+#resultList li {
+    margin: 5px 0;
+}
+
+/* ===== Huvudinnehåll ===== */
 main {
     padding: 40px;
 }
 
+/* ===== Footer ===== */
 footer {
-    text-align: center;
-    padding: 20px;
     background-color: #1b263b;
+    text-align: center;
+    padding: 15px;
 }
