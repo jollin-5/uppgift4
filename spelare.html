@@ -1,42 +1,36 @@
 <!DOCTYPE html>
 <html lang="sv">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NHL Statistik - Spelare</title>
+    <title>Spelare</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <header>
-    <h1>NHL Statistik</h1>
+    <div class="logo">NHL Statistik</div>
 
-    <!-- Navigering mellan webbplatsens sidor -->
+    <!-- Aktiv sida markeras med class="active" -->
     <nav>
-        <a href="index.html">Startsida</a>
-        <a href="spelare.html">Spelare</a>
-        <a href="lag.html">Lag</a>
-        <a href="statistik.html">Statistik</a>
-        <a href="sok.html">Sök</a>
-        <a href="om.html">Om</a>
+        <ul>
+            <li><a href="index.html">Startsida</a></li>
+            <li><a href="spelare.html" class="active">Spelare</a></li>
+            <li><a href="lag.html">Lag</a></li>
+            <li><a href="statistik.html">Statistik</a></li>
+            <li><a href="sok.html">Sök</a></li>
+            <li><a href="om.html">Om</a></li>
+        </ul>
     </nav>
-
-    <!-- Sökfält -->
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Sök sida...">
-        <ul id="resultList"></ul>
-    </div>
 </header>
 
 <main>
 
     <!-- Tabell med spelarstatistik -->
-    <h2>Spelarstatistik 2023/24</h2>
+    <h1>Spelarstatistik 2023/24</h1>
 
     <table>
-
         <!-- Tabellrubriker -->
         <tr>
             <th>Spelare</th>
@@ -46,7 +40,7 @@
             <th>Poäng</th>
         </tr>
 
-        <!-- Spelarens statistikrad -->
+        <!-- Spelarens data -->
         <tr>
             <td>Nikita Kucherov</td>
             <td>TBL</td>
@@ -78,6 +72,10 @@
 <footer>
     <p>&copy; 2026 NHL Statistik</p>
 </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
 
 <script src="js/script.js"></script>
 
