@@ -1,90 +1,209 @@
-/* ===== Grundinställningar ===== */
+/* =================================================
+   GRUNDINSTÄLLNINGAR
+   ================================================= */
+
 body {
     margin: 0; /* Tar bort standardmarginal */
-    font-family: Arial, sans-serif; /* Typsnitt */
+    font-family: Arial, sans-serif; /* Sans-serif enligt kravspec */
     background-color: #0d1b2a; /* Mörk bakgrund */
     color: white; /* Vit text */
 }
 
-/* ===== Header ===== */
+/* =================================================
+   HEADER
+   ================================================= */
+
 header {
-    background-color: #1b263b;
+    background-color: #1b263b; /* Mörkblå */
     padding: 15px 40px;
-    display: flex;
-    justify-content: space-between; /* Separera logotyp och meny */
-    align-items: center;
+
+    display: flex; /* Flexbox-layout */
+    justify-content: space-between; /* Logo vänster, meny höger */
+    align-items: center; /* Centrera vertikalt */
 }
 
-/* ===== Navigering ===== */
+/* Logotyp */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* =================================================
+   NAVIGATION
+   ================================================= */
+
 nav ul {
     list-style: none; /* Tar bort punkter */
-    display: flex;
-    gap: 20px;
-    padding: 0;
+    display: flex; /* Länkar på rad */
+    gap: 30px; /* Mellanrum mellan länkar */
     margin: 0;
+    padding: 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 17px;
+    transition: 0.2s ease;
 }
 
 /* Hover-effekt */
-nav a:hover,
-.active {
+nav a:hover {
+    color: #00b4d8; /* Ljusblå accent */
+}
+
+/* Aktiv sida */
+nav a.active {
     color: #00b4d8;
 }
 
-/* ===== Hero-sektion ===== */
-.hero {
-    padding: 60px 0;
+/* =================================================
+   HUVUDINNEHÅLL
+   ================================================= */
+
+main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrera innehåll */
 }
 
-/* ===== Kort-layout ===== */
+/* Rubriker */
+h1 {
+    margin-top: 0;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* =================================================
+   GRID FÖR LAG & KORT
+   ================================================= */
+
+.team-grid,
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px;
+    margin-top: 30px;
 }
 
+.team-card,
 .card {
     background-color: #1b263b;
     padding: 20px;
     border-radius: 8px;
+    transition: 0.2s ease;
 }
 
-/* Knapp */
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #00b4d8;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
+/* Liten hover-effekt */
+.team-card:hover,
+.card:hover {
+    transform: translateY(-3px);
 }
 
-/* ===== Tabeller ===== */
+/* =================================================
+   TABELLER (STATISTIK & SPELARE)
+   ================================================= */
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 th, td {
-    padding: 10px;
-    border-bottom: 1px solid #444;
+    padding: 12px;
+    border-bottom: 1px solid #2e3a59;
+    text-align: left;
 }
 
 th {
     background-color: #1b263b;
 }
 
-/* ===== Footer ===== */
+/* =================================================
+   KNAPPAR
+   ================================================= */
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 14px;
+    background-color: #00b4d8;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #00d4ff;
+}
+
+/* =================================================
+   SÖKFÄLT (om det används på sidan)
+   ================================================= */
+
+input[type="text"] {
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: none;
+    margin-top: 10px;
+}
+
+#resultList {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#resultList li {
+    margin-bottom: 5px;
+}
+
+#resultList a {
+    color: #00b4d8;
+    text-decoration: none;
+}
+
+#resultList a:hover {
+    text-decoration: underline;
+}
+
+/* =================================================
+   FOOTER
+   ================================================= */
+
 footer {
     background-color: #1b263b;
     text-align: center;
     padding: 15px;
-    margin-top: 40px;
+    margin-top: 60px;
+    font-size: 14px;
+}
+
+/* =================================================
+   RESPONSIV DESIGN
+   ================================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        padding: 20px;
+    }
+
 }
