@@ -1,88 +1,89 @@
 <!DOCTYPE html> <!-- Anger att vi använder HTML5 -->
-<html lang="sv"> <!-- Anger språk: svenska -->
+<html lang="sv"> <!-- Språk: svenska -->
 
 <head>
-    <!-- Teckenkodning så att å, ä, ö fungerar korrekt -->
+    <!-- Teckenkodning -->
     <meta charset="UTF-8">
 
-    <!-- Gör sidan responsiv (anpassar sig till mobil och surfplatta) -->
+    <!-- Gör sidan responsiv -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Titel som visas i webbläsarfliken -->
+    <!-- Titel i webbläsarfliken -->
     <title>NHL Statistik - Startsida</title>
 
-    <!-- Länkar extern CSS-fil -->
+    <!-- Länkar extern CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- ===== HEADER ===== -->
 <header>
-    <!-- Webbplatsens huvudrubrik -->
-    <h1>NHL Statistik</h1>
 
-    <!-- Navigationsmeny för att byta sida -->
+    <!-- Webbplatsens logotyp/namn -->
+    <div class="logo">NHL Statistik</div>
+
+    <!-- Navigationsmeny -->
     <nav>
-        <a href="index.html">Startsida</a>
-        <a href="spelare.html">Spelare</a>
-        <a href="lag.html">Lag</a>
-        <a href="statistik.html">Statistik</a>
-        <a href="sok.html">Sök</a>
-        <a href="om.html">Om</a>
+        <ul>
+            <!-- Länkar till alla sidor -->
+            <li><a href="index.html">Startsida</a></li>
+            <li><a href="spelare.html">Spelare</a></li>
+            <li><a href="lag.html">Lag</a></li>
+            <li><a href="statistik.html">Statistik</a></li>
+            <li><a href="sok.html">Sök</a></li>
+            <li><a href="om.html">Om</a></li>
+        </ul>
     </nav>
 
-    <!-- Global sökfunktion -->
-    <div class="search-container">
-
-        <!-- Inputfält där användaren skriver -->
-        <input type="text" id="searchInput" placeholder="Sök sida...">
-
-        <!-- Lista där sökresultat visas dynamiskt -->
-        <ul id="resultList"></ul>
-
-    </div>
 </header>
 
-<!-- Huvudinnehåll -->
+<!-- ===== HUVUDINNEHÅLL ===== -->
 <main>
 
-    <!-- Sektion för toppspelare -->
-    <h2>Toppspelare 2023/24</h2>
+    <!-- Introduktionssektion -->
+    <section class="hero">
+        <h1>Välkommen till NHL Statistik</h1>
+        <p>Analysera lag, spelare och säsongsdata från NHL 2023/24.</p>
+    </section>
 
-    <!-- Flex-container för spelarkort -->
-    <div class="card-container">
+    <!-- Kort-layout för översikt -->
+    <section class="card-grid">
 
         <!-- Kort 1 -->
-        <div class="card">
-            <h3>Nikita Kucherov</h3>
-            <p>Lag: Tampa Bay Lightning</p>
-            <p>Poäng: 144</p>
-        </div>
+        <article class="card">
+            <h2>Toppspelare</h2>
+            <p>Nikita Kucherov – 144 poäng</p>
+            <p>Nathan MacKinnon – 140 poäng</p>
+            <a href="spelare.html" class="btn">Se alla spelare</a>
+        </article>
 
         <!-- Kort 2 -->
-        <div class="card">
-            <h3>Nathan MacKinnon</h3>
-            <p>Lag: Colorado Avalanche</p>
-            <p>Poäng: 140</p>
-        </div>
+        <article class="card">
+            <h2>Topplag</h2>
+            <p>New York Rangers – 114 poäng</p>
+            <p>Dallas Stars – 113 poäng</p>
+            <a href="lag.html" class="btn">Se alla lag</a>
+        </article>
 
         <!-- Kort 3 -->
-        <div class="card">
-            <h3>Connor McDavid</h3>
-            <p>Lag: Edmonton Oilers</p>
-            <p>Poäng: 132</p>
-        </div>
+        <article class="card">
+            <h2>Ligastatistik</h2>
+            <p>Genomsnitt mål/match: 6.2</p>
+            <p>Totalt matcher: 1312</p>
+            <a href="statistik.html" class="btn">Se statistik</a>
+        </article>
 
-    </div>
+    </section>
 
 </main>
 
-<!-- Sidfot -->
+<!-- ===== FOOTER ===== -->
 <footer>
     <p>&copy; 2026 NHL Statistik</p>
 </footer>
 
-<!-- Länkar extern JavaScript-fil -->
+<!-- Länkar extern JavaScript -->
 <script src="js/script.js"></script>
 
 </body>
