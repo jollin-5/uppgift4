@@ -1,46 +1,49 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NHL Statistik - Lag</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+// Väntar tills hela HTML-dokumentet är laddat
+document.addEventListener("DOMContentLoaded", function () {
 
-<body>
+    // Data som går att söka
+    const data = [
+        { name: "Nikita Kucherov", url: "spelare.html" },
+        { name: "Nathan MacKinnon", url: "spelare.html" },
+        { name: "Connor McDavid", url: "spelare.html" },
+        { name: "New York Rangers", url: "lag.html" },
+        { name: "Dallas Stars", url: "lag.html" },
+        { name: "Boston Bruins", url: "lag.html" }
+    ];
 
-<header>
-    <h1>NHL Statistik</h1>
+    // Hämtar inputfältet
+    const searchInput = document.getElementById("searchInput");
 
-    <!-- Navigeringsmeny -->
-    <nav>
-        <a href="index.html">Startsida</a>
-        <a href="spelare.html">Spelare</a>
-        <a href="lag.html">Lag</a>
-        <a href="statistik.html">Statistik</a>
-        <a href="sok.html">Sök</a>
-        <a href="om.html">Om</a>
-    </nav>
+    // Hämtar listan där resultat ska visas
+    const resultList = document.getElementById("resultList");
 
-    <!-- Sökfunktion -->
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Sök sida...">
-        <ul id="resultList"></ul>
-    </div>
-</header>
+    // Kontroll så att sökfält finns på sidan
+    if (searchInput) {
 
-<!-- Laginformation -->
-<main>
-    <h2>Lag</h2>
-    <p>Toronto Maple Leafs</p>
-    <p>Boston Bruins</p>
-</main>
+        // När användaren skriver
+        searchInput.addEventListener("keyup", function () {
 
-<footer>
-    <p>&copy; 2026 NHL Statistik</p>
-</footer>
+            const searchTerm = searchInput.value.toLowerCase();
+            resultList.innerHTML = "";
 
-<script src="js/script.js"></script>
+            // Loopar igenom data
+            data.forEach(item => {
 
-</body>
-</html>
+                // Om text matchar
+                if (item.name.toLowerCase().includes(searchTerm)) {
+
+                    const li = document.createElement("li");
+                    const link = document.createElement("a");
+
+                    link.href = item.url;
+                    link.textContent = item.name;
+                    link.style.color = "white";
+
+                    li.appendChild(link);
+                    resultList.appendChild(li);
+                }
+            });
+        });
+    }
+
+});
