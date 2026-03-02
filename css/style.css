@@ -1,4 +1,4 @@
-/* ===== Grundinställningar för hela sidan ===== */
+/* ===== Grundinställningar ===== */
 body {
     margin: 0; /* Tar bort standardmarginal */
     font-family: Arial, sans-serif; /* Typsnitt */
@@ -8,40 +8,51 @@ body {
 
 /* ===== Header ===== */
 header {
-    background-color: #1b263b; /* Mörkare blå */
+    background-color: #1b263b; /* Mörkblå bakgrund */
     padding: 20px;
 }
 
 /* ===== Navigationslänkar ===== */
 nav a {
     color: white;
-    margin-right: 15px;
-    text-decoration: none; /* Tar bort understrykning */
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Hover-effekt */
+/* Färg vid hover */
 nav a:hover {
-    color: #00b4d8; /* Ljusblå accent */
+    color: #00b4d8;
 }
 
-/* ===== Sökfunktion ===== */
-.search-container {
-    margin-top: 10px;
+/* ===== Kort-layout ===== */
+.card-container {
+    display: flex; /* Flexbox-layout */
+    flex-wrap: wrap; /* Tillåter radbrytning */
+    gap: 20px; /* Mellanrum */
 }
 
-#searchInput {
-    padding: 8px;
-    width: 200px;
+.card {
+    background-color: #1b263b;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 250px; /* Responsiv bredd */
 }
 
-#resultList {
-    list-style: none; /* Tar bort punkter */
-    padding: 0;
-    margin-top: 5px;
+/* ===== Tabeller ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-#resultList li {
-    margin: 5px 0;
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+th {
+    background-color: #1b263b;
 }
 
 /* ===== Huvudinnehåll ===== */
@@ -54,4 +65,5 @@ footer {
     background-color: #1b263b;
     text-align: center;
     padding: 15px;
+    margin-top: 40px;
 }
