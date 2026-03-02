@@ -1,66 +1,50 @@
 // Väntar tills hela HTML-dokumentet är laddat
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Hämtar sökfältet
-    const searchInput = document.getElementById("searchInput");
-
-    // Hämtar listan där resultaten ska visas
-    const resultList = document.getElementById("resultList");
-
-    // Array med alla sidor som går att söka
-    const pages = [
-        { name: "Startsida", url: "index.html" },
-        { name: "Spelare", url: "spelare.html" },
-        { name: "Lag", url: "lag.html" },
-        { name: "Statistik", url: "statistik.html" },
-        { name: "Sök", url: "sok.html" },
-        { name: "Om webbplatsen", url: "om.html" }
+    // Data som går att söka
+    const data = [
+        { name: "Nikita Kucherov", url: "spelare.html" },
+        { name: "Nathan MacKinnon", url: "spelare.html" },
+        { name: "Connor McDavid", url: "spelare.html" },
+        { name: "New York Rangers", url: "lag.html" },
+        { name: "Dallas Stars", url: "lag.html" },
+        { name: "Boston Bruins", url: "lag.html" }
     ];
 
-    // Säkerhetskontroll så att elementen finns
-    if (searchInput && resultList) {
+    // Hämtar inputfältet
+    const searchInput = document.getElementById("searchInput");
 
-        // När användaren skriver i sökfältet
+    // Hämtar listan där resultat ska visas
+    const resultList = document.getElementById("resultList");
+
+    // Kontroll så att sökfält finns på sidan
+    if (searchInput) {
+
+        // När användaren skriver
         searchInput.addEventListener("keyup", function () {
 
-            // Gör söktexten till små bokstäver
             const searchTerm = searchInput.value.toLowerCase();
-
-            // Rensar tidigare resultat
             resultList.innerHTML = "";
 
-            // Om inget är skrivet, visa inget
-            if (searchTerm.length === 0) return;
+            // Loopar igenom data
+            data.forEach(item => {
 
-            // Loopar igenom alla sidor
-            pages.forEach(function (page) {
+                // Om text matchar
+                if (item.name.toLowerCase().includes(searchTerm)) {
 
-                // Om sidans namn innehåller sökordet
-                if (page.name.toLowerCase().includes(searchTerm)) {
-
-                    // Skapar nytt listelement
                     const li = document.createElement("li");
-
-                    // Skapar länk
                     const link = document.createElement("a");
 
-                    // Sätter länkens adress
-                    link.href = page.url;
-
-                    // Sätter länkens text
-                    link.textContent = page.name;
-
-                    // Gör texten vit
+                    link.href = item.url;
+                    link.textContent = item.name;
                     link.style.color = "white";
 
-                    // Lägger in länken i listan
                     li.appendChild(link);
-
-                    // Lägger till listan i HTML
                     resultList.appendChild(li);
                 }
             });
         });
     }
+
 });
 
