@@ -1,36 +1,59 @@
-<!DOCTYPE html>
-<html lang="sv">
+<!DOCTYPE html> <!-- Anger att vi använder HTML5 -->
+<html lang="sv"> <!-- Språket är svenska -->
+
 <head>
+    <!-- Teckenkodning så att å, ä, ö fungerar -->
     <meta charset="UTF-8">
+
+    <!-- Gör sidan responsiv på mobil -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NHL Statistik</title>
+
+    <!-- Titel som visas i webbläsarens flik -->
+    <title>NHL Statistik - Startsida</title>
+
+    <!-- Kopplar extern CSS-fil -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header>
-    <div class="logo">NHL Statistik</div>
+    <!-- Webbplatsens huvudrubrik -->
+    <h1>NHL Statistik</h1>
+
+    <!-- Navigationsmeny -->
     <nav>
-        <ul>
-            <li><a href="index.html">Startsida</a></li>
-            <li><a href="spelare.html">Spelare</a></li>
-            <li><a href="lag.html">Lag</a></li>
-            <li><a href="statistik.html">Statistik</a></li>
-            <li><a href="sok.html">Sök</a></li>
-            <li><a href="om.html">Om</a></li>
-        </ul>
+        <a href="index.html">Startsida</a>
+        <a href="spelare.html">Spelare</a>
+        <a href="lag.html">Lag</a>
+        <a href="statistik.html">Statistik</a>
+        <a href="sok.html">Sök</a>
+        <a href="om.html">Om</a>
     </nav>
+
+    <!-- Sökfunktion -->
+    <div class="search-container">
+        <!-- Inputfält där användaren skriver -->
+        <input type="text" id="searchInput" placeholder="Sök sida...">
+
+        <!-- Lista där sökresultat visas -->
+        <ul id="resultList"></ul>
+    </div>
 </header>
 
+<!-- Huvudinnehåll -->
 <main>
-    <h1>Välkommen till NHL Statistik</h1>
-    <p>Utforska spelare, lag och statistik.</p>
+    <h2>Välkommen</h2>
+    <p>Utforska NHL statistik, spelare och lag.</p>
 </main>
 
+<!-- Sidfot -->
 <footer>
     <p>&copy; 2026 NHL Statistik</p>
 </footer>
 
+<!-- Kopplar extern JavaScript -->
 <script src="js/script.js"></script>
+
 </body>
 </html>
