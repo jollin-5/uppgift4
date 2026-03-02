@@ -1,49 +1,88 @@
-// Väntar tills hela HTML-dokumentet är laddat
-document.addEventListener("DOMContentLoaded", function () {
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Teckenkodning -->
+    <meta charset="UTF-8">
 
-    // Data som går att söka
-    const data = [
-        { name: "Nikita Kucherov", url: "spelare.html" },
-        { name: "Nathan MacKinnon", url: "spelare.html" },
-        { name: "Connor McDavid", url: "spelare.html" },
-        { name: "New York Rangers", url: "lag.html" },
-        { name: "Dallas Stars", url: "lag.html" },
-        { name: "Boston Bruins", url: "lag.html" }
-    ];
+    <!-- Responsiv design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    // Hämtar inputfältet
-    const searchInput = document.getElementById("searchInput");
+    <!-- Titel -->
+    <title>NHL Statistik - Lag</title>
 
-    // Hämtar listan där resultat ska visas
-    const resultList = document.getElementById("resultList");
+    <!-- Extern CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-    // Kontroll så att sökfält finns på sidan
-    if (searchInput) {
+<body>
 
-        // När användaren skriver
-        searchInput.addEventListener("keyup", function () {
+<!-- ===== HEADER ===== -->
+<header>
 
-            const searchTerm = searchInput.value.toLowerCase();
-            resultList.innerHTML = "";
+    <!-- Logotyp -->
+    <div class="logo">NHL Statistik</div>
 
-            // Loopar igenom data
-            data.forEach(item => {
+    <!-- Fast navigeringsmeny -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Startsida</a></li>
+            <li><a href="spelare.html">Spelare</a></li>
+            <li><a href="lag.html" class="active">Lag</a></li>
+            <li><a href="statistik.html">Statistik</a></li>
+            <li><a href="sok.html">Sök</a></li>
+            <li><a href="om.html">Om</a></li>
+        </ul>
+    </nav>
 
-                // Om text matchar
-                if (item.name.toLowerCase().includes(searchTerm)) {
+</header>
 
-                    const li = document.createElement("li");
-                    const link = document.createElement("a");
+<!-- ===== HUVUDINNEHÅLL ===== -->
+<main>
 
-                    link.href = item.url;
-                    link.textContent = item.name;
-                    link.style.color = "white";
+    <!-- Sidrubrik -->
+    <h1>Aktiva NHL-lag 2023/24</h1>
 
-                    li.appendChild(link);
-                    resultList.appendChild(li);
-                }
-            });
-        });
-    }
+    <!-- Grid-layout enligt storyboard -->
+    <section class="team-grid">
 
-});
+        <!-- Lagprofil 1 -->
+        <article class="team-card">
+            <h2>New York Rangers</h2>
+            <p><strong>Vinster:</strong> 55</p>
+            <p><strong>Förluster:</strong> 23</p>
+            <p><strong>Placering:</strong> 1 (Metropolitan)</p>
+            <p><strong>Kommande matcher:</strong> 4</p>
+        </article>
+
+        <!-- Lagprofil 2 -->
+        <article class="team-card">
+            <h2>Dallas Stars</h2>
+            <p><strong>Vinster:</strong> 52</p>
+            <p><strong>Förluster:</strong> 21</p>
+            <p><strong>Placering:</strong> 1 (Central)</p>
+            <p><strong>Kommande matcher:</strong> 4</p>
+        </article>
+
+        <!-- Lagprofil 3 -->
+        <article class="team-card">
+            <h2>Boston Bruins</h2>
+            <p><strong>Vinster:</strong> 47</p>
+            <p><strong>Förluster:</strong> 20</p>
+            <p><strong>Placering:</strong> 2 (Atlantic)</p>
+            <p><strong>Kommande matcher:</strong> 4</p>
+        </article>
+
+    </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <p>&copy; 2026 NHL Statistik</p>
+</footer>
+
+<!-- Extern JavaScript (INGEN kod ska ligga direkt i HTML) -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
