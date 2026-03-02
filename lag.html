@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <!-- Teckenkodning -->
     <meta charset="UTF-8">
-
-    <!-- Responsiv design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Titel -->
     <title>NHL Statistik - Lag</title>
-
-    <!-- Extern CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!-- ===== HEADER ===== -->
 <header>
-
-    <!-- Logotyp -->
     <div class="logo">NHL Statistik</div>
 
-    <!-- Fast navigeringsmeny -->
     <nav>
         <ul>
             <li><a href="index.html">Startsida</a></li>
@@ -33,56 +21,126 @@
             <li><a href="om.html">Om</a></li>
         </ul>
     </nav>
-
 </header>
 
-<!-- ===== HUVUDINNEHÅLL ===== -->
 <main>
 
-    <!-- Sidrubrik -->
-    <h1>Aktiva NHL-lag 2023/24</h1>
+<h1>Top 3 per division 2023/24</h1>
 
-    <!-- Grid-layout enligt storyboard -->
-    <section class="team-grid">
+<!-- ===== ATLANTIC ===== -->
+<section>
+    <h2>Atlantic Division</h2>
+    <table>
+        <tr>
+            <th>Placering</th>
+            <th>Lag</th>
+            <th>Poäng</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Boston Bruins</td>
+            <td>109</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Florida Panthers</td>
+            <td>107</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Toronto Maple Leafs</td>
+            <td>102</td>
+        </tr>
+    </table>
+</section>
 
-        <!-- Lagprofil 1 -->
-        <article class="team-card">
-            <h2>New York Rangers</h2>
-            <p><strong>Vinster:</strong> 55</p>
-            <p><strong>Förluster:</strong> 23</p>
-            <p><strong>Placering:</strong> 1 (Metropolitan)</p>
-            <p><strong>Kommande matcher:</strong> 4</p>
-        </article>
+<!-- ===== METROPOLITAN ===== -->
+<section>
+    <h2>Metropolitan Division</h2>
+    <table>
+        <tr>
+            <th>Placering</th>
+            <th>Lag</th>
+            <th>Poäng</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>New York Rangers</td>
+            <td>114</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Carolina Hurricanes</td>
+            <td>111</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>New Jersey Devils</td>
+            <td>98</td>
+        </tr>
+    </table>
+</section>
 
-        <!-- Lagprofil 2 -->
-        <article class="team-card">
-            <h2>Dallas Stars</h2>
-            <p><strong>Vinster:</strong> 52</p>
-            <p><strong>Förluster:</strong> 21</p>
-            <p><strong>Placering:</strong> 1 (Central)</p>
-            <p><strong>Kommande matcher:</strong> 4</p>
-        </article>
+<!-- ===== CENTRAL ===== -->
+<section>
+    <h2>Central Division</h2>
+    <table>
+        <tr>
+            <th>Placering</th>
+            <th>Lag</th>
+            <th>Poäng</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Dallas Stars</td>
+            <td>113</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Colorado Avalanche</td>
+            <td>110</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Winnipeg Jets</td>
+            <td>102</td>
+        </tr>
+    </table>
+</section>
 
-        <!-- Lagprofil 3 -->
-        <article class="team-card">
-            <h2>Boston Bruins</h2>
-            <p><strong>Vinster:</strong> 47</p>
-            <p><strong>Förluster:</strong> 20</p>
-            <p><strong>Placering:</strong> 2 (Atlantic)</p>
-            <p><strong>Kommande matcher:</strong> 4</p>
-        </article>
-
-    </section>
+<!-- ===== PACIFIC ===== -->
+<section>
+    <h2>Pacific Division</h2>
+    <table>
+        <tr>
+            <th>Placering</th>
+            <th>Lag</th>
+            <th>Poäng</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Edmonton Oilers</td>
+            <td>104</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Vancouver Canucks</td>
+            <td>102</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Los Angeles Kings</td>
+            <td>99</td>
+        </tr>
+    </table>
+</section>
 
 </main>
 
-<!-- ===== FOOTER ===== -->
 <footer>
     <p>&copy; 2026 NHL Statistik</p>
 </footer>
 
-<!-- Extern JavaScript (INGEN kod ska ligga direkt i HTML) -->
 <script src="js/script.js"></script>
-
 </body>
 </html>
