@@ -1,7 +1,5 @@
-// Väntar tills hela HTML-dokumentet är laddat
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Data som går att söka
     const data = [
         { name: "Nikita Kucherov", url: "spelare.html" },
         { name: "Nathan MacKinnon", url: "spelare.html" },
@@ -11,25 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Boston Bruins", url: "lag.html" }
     ];
 
-    // Hämtar inputfältet
     const searchInput = document.getElementById("searchInput");
-
-    // Hämtar listan där resultat ska visas
     const resultList = document.getElementById("resultList");
 
-    // Kontroll så att sökfält finns på sidan
-    if (searchInput) {
+    if (searchInput && resultList) {
 
-        // När användaren skriver
         searchInput.addEventListener("keyup", function () {
 
             const searchTerm = searchInput.value.toLowerCase();
             resultList.innerHTML = "";
 
-            // Loopar igenom data
-            data.forEach(item => {
+            data.forEach(function (item) {
 
-                // Om text matchar
                 if (item.name.toLowerCase().includes(searchTerm)) {
 
                     const li = document.createElement("li");
@@ -37,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     link.href = item.url;
                     link.textContent = item.name;
-                    link.style.color = "white";
 
                     li.appendChild(link);
                     resultList.appendChild(li);
@@ -45,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
+});
 
 });
+
 
