@@ -84,7 +84,7 @@ h2 {
 
 .page-image {
     width: 100%;        /* Bilden fyller hela bredden */
-    height: 250px;      /* Samma höjd på alla sidor */
+    height: 200px;      /* Samma höjd på alla sidor */
     object-fit: cover;  /* Beskär bilden snyggt */
     display: block;
 }
