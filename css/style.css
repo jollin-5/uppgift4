@@ -79,6 +79,17 @@ h2 {
 }
 
 /* =================================================
+   SIDBILDER (NY DEL)
+   ================================================= */
+
+.page-image {
+    width: 100%;        /* Bilden fyller hela bredden */
+    height: 350px;      /* Samma höjd på alla sidor */
+    object-fit: cover;  /* Beskär bilden snyggt */
+    display: block;
+}
+
+/* =================================================
    GRID FÖR LAG & KORT
    ================================================= */
 
